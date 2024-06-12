@@ -1,0 +1,87 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:wght@200&display=swap"  rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Freeman&display=swap" rel="stylesheet">
+<style>
+    html {
+        font-size: 20px;
+    }
+    body {
+        background: rgb(247, 247, 239);
+        font-family: "Ubuntu Sans", sans-serif;
+        text-align: center;
+        padding: 2rem;
+    }
+    h1 {
+        color: #3bb9c4;
+        font-family: "Freeman", sans-serif;
+        font-weight: 400;
+        font-size: 5rem;
+        
+    }
+    h1:hover {
+        color: #3BC48B;
+    }
+    h2 {
+        color: #3bb9c4;
+    }
+    h2:hover {
+        color: #3BC48B;
+    }
+    p {
+        letter-spacing: 0.0166667rem;
+        color: #3B74C4;
+        font-size: 1.2rem;
+    }
+    @keyframes fadeIn { 
+        from { opacity: 0; } 
+    }
+    .animate-flicker {
+    animation: fadeIn 3s infinite alternate;
+    }
+    #reveal {
+        cursor: pointer;
+    }
+    @media only screen and (max-width: 400px){
+        html {
+            font-size: 22px;
+        }   
+        body{
+            background: black;
+        }
+        h1 {
+            font-size: 3rem;
+        }
+    }
+</style>
+</head>
+<body>
+    <h1 class="animate-flicker">
+        Katy Woodward
+    </h1>
+    <p>
+        Project Management | Data Science | Analytics
+    </p>
+    <p>
+        Let's Chat!
+    </p>
+    <h2 id="reveal">
+        Click to reveal email
+    </h2>
+    <a href="https://github.com/katylayt">
+        <img src="/github-logo.png" alt="github logo" width=60>
+    </a>
+    <script defer>
+        document.getElementById("reveal").addEventListener("click", (e)=>{
+            const no = 'kww'
+            const pls = 'fastmail'
+            const ty= '.com'
+            const bots = '@'
+            e.target.innerHTML = "".concat(no,bots,pls,ty)
+        });
+
+    </script>
+</body>
